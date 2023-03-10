@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+</head>
+<body>
+    <div class="container">
+        <div class="toggle">
+            <input type="checkbox" id="switch"><label for="switch"></label>
+        </div>
+        <h1>My to do list ... <i class="fa-solid fa-pen"></i></h1>
+        <form id="form">
+            <div class="input__wrapper">
+                <input  required minlength="1" type="text" id="inp" placeholder="Create new tasks...">
+                <button id="btn" type="submit">Add</button>
+            </div>
+        </form>
+        <div class="task-container" id="task-container">
+            <ul id="ul"></ul>
+        </div>
+    </div>
+    <script src="./Js/app.js"></script>
+</body>
+</html>
