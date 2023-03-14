@@ -30,7 +30,7 @@ form.addEventListener("submit", e => {
 
 taskEl.addEventListener("click", (e) => {
     if(e.target.className == "complete" ){
-      let isAgreedToComplete = confirm('Are you complete this task?')
+      let isAgreedToComplete = confirm('Did you complete this task?')
       if(isAgreedToComplete){
       e.target.parentElement.parentElement.style.textDecoration = "line-through"
       }
@@ -45,13 +45,13 @@ taskEl.addEventListener("click", (e) => {
     }
     else if(e.target.className == "edit"){
       console.log(e.target.Children);
-      if(e.target.parentElement.parentElement.hasAttribute("contenteditable")){
-        e.target.parentElement.parentElement.removeAttribute("contenteditable");
+      if(e.target.parentElement.parentElement.firstChild.hasAttribute("contenteditable")){
+        e.target.parentElement.parentElement.firstChild.removeAttribute("contenteditable");
         e.target.innerHTML = '<i class="fas fa-edit"></i>';
         e.target.style.background = "gold"
       }
       else{
-        e.target.parentElement.parentElement.setAttribute("contenteditable", true);
+        e.target.parentElement.parentElement.firstChild.setAttribute("contenteditable", true);
         e.target.innerHTML = '<i class="fas fa-check-double"></i>';
         e.target.style.background = "purple"
       }
